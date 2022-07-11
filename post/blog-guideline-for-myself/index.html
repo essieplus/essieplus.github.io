@@ -1,0 +1,214 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title>个人向-博客写作指南 | EssiePlus</title>
+<meta name="description" content="Essie plus the world.">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://essieplus.github.io/favicon.ico?v=1657529979030">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://essieplus.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://essieplus.github.io">
+        <img class="avatar" src="https://essieplus.github.io/images/avatar.png?v=1657529979030" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://essieplus.github.io">
+        <h1 class="site-title">EssiePlus</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/4027658/pexels-photo-4027658.jpeg?cs=srgb&amp;dl=pexels-joshua-miranda-4027658.jpg&amp;fm=jpg')">
+            </div>
+          
+          <h2 class="post-title">个人向-博客写作指南</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-07-11</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://essieplus.github.io/tag/blog-skill/">
+                    blog-skill
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content" v-pre>
+            <h1 id="给自己写说明书">给自己写说明书</h1>
+<p>自己架设博客的工作流是比较复杂的，相信在写作过程中也会不断的迭代升级，为了防止遗忘，建立升级的baseline，还是决定给自己写一篇继续写作的指南。</p>
+<h1 id="解决的问题">解决的问题</h1>
+<ul>
+<li>写作与发布的快速试错与迭代</li>
+<li>写作与博客分离
+<ul>
+<li>Bluehost 中 WordPress 主题不好编辑</li>
+<li>使用简单的 Markdown 风格</li>
+</ul>
+</li>
+</ul>
+<h1 id="建站过程">建站过程</h1>
+<ul>
+<li>创建 username.github.io repo</li>
+<li>Gridea 配置github repo 连接</li>
+<li>markdown 写博客
+<ul>
+<li>essieplus.github.io/posts</li>
+</ul>
+</li>
+<li>主题的替换
+<ul>
+<li>官方主题商店
+<ul>
+<li>https://gridea.dev/themes/</li>
+</ul>
+</li>
+<li>导入 essieplus.github.io/themes</li>
+</ul>
+</li>
+</ul>
+<h1 id="下一步">下一步</h1>
+<ul>
+<li>学英语的打卡贴</li>
+<li>obsidian的使用贴</li>
+<li>图片工具
+<ul>
+<li>current：直接引用link</li>
+<li>图片在github管理
+<ul>
+<li>https://zhuanlan.zhihu.com/p/138012354</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>留言工具
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/258592325">Gitalk 配置</a></li>
+</ul>
+</li>
+<li>向其他框架迁移
+<ul>
+<li>仍然是 markdown</li>
+<li>更好控制的框架</li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://essieplus.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                下一篇：Hello Gridea
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">Essie plus the world.</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://essieplus.github.io/atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
