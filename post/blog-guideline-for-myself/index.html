@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>个人向-博客写作指南 | EssiePlus</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://essieplus.github.io/favicon.ico?v=1669304440841">
+<link rel="stylesheet" href="https://essieplus.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="给自己写说明书
+自己架设博客的工作流是比较复杂的，相信在写作过程中也会不断的迭代升级，为了防止遗忘，建立升级的baseline，还是决定给自己写一篇继续写作的指南。
+解决的问题
+
+写作与发布的快速试错与迭代
+写作与博客分离
+
+Bluehos..." />
+    <meta name="keywords" content="blog-skill" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://essieplus.github.io">
+        <img src="https://essieplus.github.io/images/avatar.png?v=1669304440841" class="site-logo">
+        <h1 class="site-title">EssiePlus</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Essie plus the world.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://essieplus.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">个人向-博客写作指南</h2>
+            <div class="post-date">2022-07-11</div>
+            
+              <div class="feature-container" style="background-image: url('https://images.pexels.com/photos/4027658/pexels-photo-4027658.jpeg?cs=srgb&amp;dl=pexels-joshua-miranda-4027658.jpg&amp;fm=jpg')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <h1 id="给自己写说明书">给自己写说明书</h1>
+<p>自己架设博客的工作流是比较复杂的，相信在写作过程中也会不断的迭代升级，为了防止遗忘，建立升级的baseline，还是决定给自己写一篇继续写作的指南。</p>
+<h1 id="解决的问题">解决的问题</h1>
+<ul>
+<li>写作与发布的快速试错与迭代</li>
+<li>写作与博客分离
+<ul>
+<li>Bluehost 中 WordPress 主题不好编辑</li>
+<li>使用简单的 Markdown 风格</li>
+</ul>
+</li>
+</ul>
+<h1 id="建站过程">建站过程</h1>
+<ul>
+<li>参考链接 https://www.zhihu.com/search?type=content&amp;q=%E5%8D%9A%E5%AE%A2%20gridea</li>
+<li>创建 username.github.io repo</li>
+<li>Gridea 配置github repo 连接</li>
+<li>markdown 写博客
+<ul>
+<li>essieplus.github.io/posts</li>
+</ul>
+</li>
+<li>主题的替换
+<ul>
+<li>官方主题商店
+<ul>
+<li>https://gridea.dev/themes/</li>
+</ul>
+</li>
+<li>导入 essieplus.github.io/themes</li>
+</ul>
+</li>
+</ul>
+<h1 id="下一步">下一步</h1>
+<ul>
+<li>学英语的打卡贴</li>
+<li>obsidian的使用贴</li>
+<li>图片工具
+<ul>
+<li>current：直接引用link</li>
+<li>图片在github管理
+<ul>
+<li>https://zhuanlan.zhihu.com/p/138012354</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>留言工具
+<ul>
+<li><a href="https://zhuanlan.zhihu.com/p/258592325">Gitalk 配置</a></li>
+</ul>
+</li>
+<li>向其他框架迁移
+<ul>
+<li>仍然是 markdown</li>
+<li>更好控制的框架</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://essieplus.github.io/tag/blog-skill/" class="tag">
+                    blog-skill
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://essieplus.github.io/post/hello-gridea/">
+                  <h3 class="post-title">
+                    Hello Gridea
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '1b5d060b78b33b6b335e',
+        clientSecret: 'b358c3152261e512c467951600061aee5ec4e47b',
+        repo: 'essieplus.github.io',
+        owner: 'essieplus',
+        admin: ['essieplus'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

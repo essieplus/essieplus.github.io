@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>SRE 工作流探索 | EssiePlus</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://essieplus.github.io/favicon.ico?v=1669304440841">
+<link rel="stylesheet" href="https://essieplus.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="探索 SRE/DevOps 舒适的工作流
+
+SRE在不同公司有不同的侧重，我的工作除了继续开发一些工具和订制solution以外还包含本公司商用软件的安装，升级，备份，以及trouble shooting，对客户环境的分析和支持。在传统的开..." />
+    <meta name="keywords" content="toolman,SRE" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://essieplus.github.io">
+        <img src="https://essieplus.github.io/images/avatar.png?v=1669304440841" class="site-logo">
+        <h1 class="site-title">EssiePlus</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Essie plus the world.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://essieplus.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">SRE 工作流探索</h2>
+            <div class="post-date">2022-11-10</div>
+            
+              <div class="feature-container" style="background-image: url('https://essieplus.github.io/post-images/sre-workflow.png')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <p>探索 SRE/DevOps 舒适的工作流</p>
+<!-- more -->
+<p>SRE在不同公司有不同的侧重，我的工作除了继续开发一些工具和订制solution以外还包含本公司商用软件的安装，升级，备份，以及trouble shooting，对客户环境的分析和支持。在传统的开发工作流以外，还需要一个舒适的SRE工作流来支持日常的工作。以下是我比较舒适的工作流分享，希望对你有帮助。</p>
+<h1 id="vs-code执行性-snippet-terminal">VS Code：执行性 snippet + terminal</h1>
+<p>商业软件的SRE有非常多的考量，在搭建，升级，以及解决客户问题中，需要与自己公司的命令行工具，本公司的operator群，OCP/K8S平台，存储等等打交道。虽然对于固定的环境有固定的脚本和pipeline，但是真的接触客户的环境时，还要需要按需要按情况给出解决方案。</p>
+<p>这种情况下我的workspace是VS Code打到全屏模式，打开多tab安装或配置脚本的同时，在下方打开terminal，这样可以根据自己的需要复制要运行的命令到下方terminal执行。</p>
+<p>这对于脚本的单条（或者snippet）执行友好性有一定的要求，不能够过于依赖于上下文的变量，即除了整个环境需要的基础信息作为全局变量，比如operator安装的namespace，或者是cluster中的基本参数，此外不是很适合局部的变量或者函数。否则很容易陷入还需要当场读代码，发现某个局部变量的值是空，还需要更多的命令生成该变量。</p>
+<p>当然会有人质疑这样的脚本是不是太弱智，不是合格的程序，我认为这不是程序，只是功能脚本片段，这样的脚本面向的用户是人，是公司的客户支持人员，是客户的IT，不是CI/CD pipeline，所以完全可以不必把这看作代码～</p>
+<h1 id="浏览器toby-iterm2">浏览器Toby + iTerm2</h1>
+<p>Toby是优秀的浏览器插件，Firefox，Chrome等等都支持，只要一个账号就可以同步，非常适合保存当前浏览器打开的所有tab，并且按照collection来分类。</p>
+<p>iTerm2 是非常优秀的mac terminal工具，我会将其配置成如Guake的下拉半透明风格，并每次换电脑的时候导出导入配置文件。iTerm2的功能很强大，提供tablet功能，方便的使用常用命令；还提供方便的横竖分屏，作为linux中度使用小白非常的喜欢。</p>
+<p>如果我要进行一些略微复杂要参考很多文档的任务，还要与同事一起讨论，一般都是由我共享屏幕（我的工作流比较流畅，不容易失去焦点）。我会打开一个toby collection，里面包括执行的环境的OCP web console，相关的内部github wiki，online文档相关的几个页面，使用快捷键召唤和收起iTerm2窗口，这样就可以丝滑的同屏阅读文档并将命令复制到iTerm2执行。过程中打开更多的网页最后我会更新到这个Toby collection里（一键保存到当前collection，非常舒适）。并且会创建一个collection的note，记载一下目前的情况。</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://essieplus.github.io/tag/VSW9uz_93/" class="tag">
+                    toolman
+                  </a>
+                
+                  <a href="https://essieplus.github.io/tag/0IJHav4AH/" class="tag">
+                    SRE
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://essieplus.github.io/post/bi-ji-bo-ke-liu/">
+                  <h3 class="post-title">
+                    最简笔记-博客-流
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '1b5d060b78b33b6b335e',
+        clientSecret: 'b358c3152261e512c467951600061aee5ec4e47b',
+        repo: 'essieplus.github.io',
+        owner: 'essieplus',
+        admin: ['essieplus'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>

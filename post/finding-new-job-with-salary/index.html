@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>带薪找工作 | EssiePlus</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://essieplus.github.io/favicon.ico?v=1669304440841">
+<link rel="stylesheet" href="https://essieplus.github.io/styles/main.css">
+
+
+  
+    <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css" />
+  
+
+  
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+非典型的变动
+大公司中裁员一般比较典型：自己的人头冻结就期限之前安心拿包走人，找下一份工作；内部还有机会就面试看看，有好的机会也可以去其他的组。
+我在7月份遇到了独特的非典型变动。说来话长，有空再详细写，总而言之是尚无明确的离开期限，但是..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://essieplus.github.io">
+        <img src="https://essieplus.github.io/images/avatar.png?v=1669304440841" class="site-logo">
+        <h1 class="site-title">EssiePlus</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      Essie plus the world.
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://essieplus.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">带薪找工作</h2>
+            <div class="post-date">2022-08-08</div>
+            
+              <div class="feature-container" style="background-image: url('https://images.unsplash.com/photo-1529400971008-f566de0e6dfc?ixlib=rb-4.0.3&amp;ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8am9ifGVufDB8fDB8fA%3D%3D&amp;auto=format&amp;fit=crop&amp;w=800&amp;q=60')">
+              </div>
+            
+            <div class="post-content" v-pre>
+              <!-- more -->
+<h2 id="非典型的变动">非典型的变动</h2>
+<p>大公司中裁员一般比较典型：自己的人头冻结就期限之前安心拿包走人，找下一份工作；内部还有机会就面试看看，有好的机会也可以去其他的组。</p>
+<p>我在7月份遇到了独特的非典型变动。说来话长，有空再详细写，总而言之是尚无明确的离开期限，但是后面的去向也是完完全全依赖于庞大公司内部的架构变动，总结下来居然是无法预知的期限，无法预知流程，更无法预知去向的一个纯粹的随其自然过程。</p>
+<h2 id="亲身体验乐观锁">亲身体验乐观锁</h2>
+<p>7月初面试了公司内部的一个做AI的组，7月最后一个月拿到offer，本来的预期是8月份开始新的工作，并且重拾了Scala的内容，然而去新的组的流程被锁住了，给我发offer的组属于另外一个Business Unit，2Q的结果不好，原来的开放招聘被加了条件，只能是招属于自己BU的人。</p>
+<p>在大公司中，即使是为自己组招人的经理，所做的决定也是附带着各种高优先级条件的，而这些高优先级的条件是在乐观锁的机制下执行，有一定程度的回滚机制（毕竟人会自己找其他方式调节），有空可以做一下实现。</p>
+<p>Anyway，又回到了带薪找工作的轨道上，我的下一份DevOps的工作在哪里，是在公司之内还是在公司之外呢？</p>
+<h2 id="尘埃落定">尘埃落定</h2>
+<p>9月初公司唯一的一个正在拉人头的组被锁定了，我的本地老板把我安排了过去，相比于之前完全写工具的SRE工作，这个工作更多的与客户经理打交道，对我而言是不错的经历，整个团队人不多，分散在不同的时区。</p>
+<p>10月以后团队又要来一位技术好，人又热情的同事，方向感更好了一些。目前除了需要我大量自学，并且经理在加拿大以外，并无更多不合适的地方了。会在挑战中学习，并且持续的进步。</p>
+<p>作为女性，言语无味，面目寡淡，家境普通，经济基础薄弱，自知在这个社会中很少有成家立业的可能性。也想一直做书呆子，不要被光怪陆离的世界改变。作为工程师技术一般，在企业软件倾颓互联网兴起的时代，想持续做一件事情也不可得，被迫颠沛流离在不同的产品和角色里。</p>
+<p>我并非不世出之才，半浸经史子集，半入圣贤之道，无非勉强独善其身。一直以来自我的计划都是没有计划，也没有人需要我为其负责。这次的变动其实也知道公司无裁人的计划与资金，也并无真正的凶险，尘埃落定后，应是一切如常。</p>
+<h2 id="波澜再起">波澜再起</h2>
+<p>在变动之中我虽然知道大概率是另一种意思的一成不变，但是也试着重新思考自己下一步的可能性，想要走一条不同的路，去试试同事们所在的那个环境，试试有工作就安心做，不需要过度担忧与内卷的状态。大概制定了一个方向，缓慢推进也许需要几年的时间才能实现，但是设定了这样一个方向，将其作为我日常生活的side project，使得我面向更大的可能。</p>
+<p>这个过程中机缘巧合的加强了我与一个熟人的弱连接，本来只是无心的分享与语言的交换，从熟人到朋友，分享彼此的人生，似乎出现了另外的可能性...</p>
+<h2 id="后记">后记</h2>
+<p>带薪找工作的故事就这样结束了，但是Essie plus the world的故事却开启了，在这个博客中，我开始向世界表达自己，也希望得到世界的回应。</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://essieplus.github.io/post/how-to-pass-ielts-most-slow/">
+                  <h3 class="post-title">
+                    如何最慢考到心仪的雅思分数
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+              
+                <div id="gitalk-container" data-aos="fade-in"></div>
+              
+
+              
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+  
+    <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+    <script>
+
+      var gitalk = new Gitalk({
+        clientID: '1b5d060b78b33b6b335e',
+        clientSecret: 'b358c3152261e512c467951600061aee5ec4e47b',
+        repo: 'essieplus.github.io',
+        owner: 'essieplus',
+        admin: ['essieplus'],
+        id: (location.pathname).substring(0, 49),      // Ensure uniqueness and length less than 50
+        distractionFreeMode: false  // Facebook-like distraction free mode
+      })
+
+      gitalk.render('gitalk-container')
+
+    </script>
+  
+
+  
+
+
+
+
+  </body>
+</html>
